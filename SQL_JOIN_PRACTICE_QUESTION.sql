@@ -13,7 +13,7 @@ FROM flipkart.users t1
 JOIN flipkart.orders t2
 ON t1.user_id = t2.user_id
 GROUP BY t1.name
-ORDER BY order_count DESC LIMIT 1;
+ORDER BY order_count DESC LIMIT 1 ;
 
 -- QUESTION 3
 SELECT SUM(t1.profit) AS 'order_sum' , t2.vertical

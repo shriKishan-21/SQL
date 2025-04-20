@@ -1,3 +1,4 @@
+-- Active: 1745078467906@@127.0.0.1@3306@zomato
 -- INDEPENDENT SUBQUERY (ROW SUBQUERY)
 
 -- QUESTION 1
@@ -15,7 +16,6 @@ WITH top_director AS (
 SELECT director FROM sql_cx_live.movies
 GROUP BY director
 ORDER BY SUM(gross) DESC LIMIT 3)
-
 SELECT * FROM sql_cx_live.movies
 WHERE director IN (SELECT * FROM top_director);
 
